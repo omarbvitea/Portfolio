@@ -1,0 +1,14 @@
+---
+import ExternalLink from "./icons/externalLink.astro"
+const {title, provider, credential, icon} = Astro.props
+---
+<div class="flex w-full items-center justify-between">
+  <div class="flex items-center gap-4">
+    <img src={icon} alt="Logo certificado" class="h-12 w-12 rounded-full object-cover shadow-md"/>
+    <div class="flex flex-col">
+        <h3 class="font-medium">{title}</h3>
+        <span class="font-light">{provider}</span>
+      </div>
+  </div>
+  <a href={credential} target="_blank" rel="noopener noreferrer"><ExternalLink/></a>
+</div>

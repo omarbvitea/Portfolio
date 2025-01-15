@@ -1,0 +1,33 @@
+---
+import Css from "../icons/css.astro"
+import Git from "../icons/git.astro"
+import Html from "../icons/html.astro"
+import Javascript from "../icons/javascript.astro"
+import Tailwind from "../icons/tailwind.astro"
+import Typescript from "../icons/typescript.astro"
+import Vue from "../icons/vue.astro"
+import Section from "../Section.astro"
+
+const skills = [
+    {icon: Html, name: "Html"},
+    {icon: Css, name: "Css"},
+    {icon: Javascript, name: "Javascript"},
+    {icon: Typescript, name: "Typescript"},
+    {icon: Vue, name: "Vue"},
+    {icon: Git, name: "Git"},
+    {icon: Tailwind, name: "Tailwind"},
+]
+---
+
+<Section title="Habilidades">
+    <div class="flex flex-wrap items-center gap-3">
+        {skills.map((skill)=>{
+            return <span class="skillTag"><skill.icon/>{skill.name}</span>
+        })}
+    </div>
+</Section>
+<style>
+    .skillTag{
+        @apply flex gap-2 rounded-xl bg-stone-200 px-2 py-2
+    }
+</style>

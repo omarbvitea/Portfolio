@@ -1,0 +1,112 @@
+---
+import Section from "../Section.astro";
+import ProyectCard from "../ProyectCard.astro";
+
+const projects = [
+    {
+        position: 1,
+        title: "Portafolio",
+        github: "https://github.com/llVitell/Portfolio",
+        url:"https://portfolio-llvitells-projects.vercel.app/",
+        description:"Portafolio personal con diseño minimalista",
+        tags: ["Astro", "Tailwind", "Vercel"]
+    },
+    {   
+        position: 2,
+        title: "Air Quality",
+        github: "https://github.com/llVitell/FrontVercel",
+        url:"https://front-vercel-1mc1yxk3u-llvitells-projects.vercel.app/",
+        description:"Panel para visualizar la calidad del aire en tiempo real",
+        tags: ["React", "Typescript", "Backend"]
+    },
+    {
+        position: 3,
+        title: "Skytech",
+        github: "",
+        url:"https://skytech-services.vercel.app/",
+        description:"Landing page de los servicios tecnológicos ofrecidos por Skytech",
+        tags: ["Astro", "Javascript", "LandingPage"]
+    },
+	{
+        position: 4,
+        title: "ToDoList (En progreso)",
+        github: "https://github.com/llVitell/ToDoList.git",
+        url:"https://to-do-list-5l9rf90gu-llvitells-projects.vercel.app/today",
+        description:"ToDoList construido con Angular y Material que permite gestionar tareas",
+        tags: ["Angular", "Typescript"]
+    },
+	{
+        position: 5,
+        title: "Tasks CRUD",
+        github: "https://github.com/llVitell/ToDoList-Back.git",
+        description:"CRUD de tareas construido con NodeJs, Express y MySQL utilizado para el ToDoList",
+        tags: ["NodeJS", "Typescript", "MySQL"]
+    }
+
+]
+---
+
+<Section title="Proyectos">
+  <div
+    class="slider"
+    style=`
+    --width: 250px;
+    --height: 250px;
+    --quantity: ${projects.length};`
+  >
+    <div class="list">
+        {projects.map((project) => (
+            <div class="item" style=`--position: ${project.position}` >
+                <ProyectCard
+                    title={project.title}
+                    github={project.github}
+                    url={project.url}
+                    description={project.description}
+                    tags={project.tags}
+                />
+            </div>
+        ))}
+    </div>
+  </div>
+</Section>
+<style>
+  .slider {
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      #000 10% 90%,
+      transparent
+    );
+  }
+  .list {
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+  }
+  .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 100%;
+    animation: autoRun 12s linear infinite;
+    animation-delay: calc((12s / var(--quantity)) * (var(--position) - 1) - 12s);
+  }
+  @keyframes autoRun {
+    from {
+      left: 100%;
+    }
+    to {
+      left: calc(var(--width) * -1);
+    }
+  }
+  .slider:hover .item {
+    animation-play-state: paused !important;
+  }
+</style>
+

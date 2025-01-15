@@ -1,0 +1,39 @@
+---
+import CertificateCard from "../CertificateCard.astro";
+import Section from "../Section.astro";
+
+const certificates = [
+    {
+        title: "Scrum Professional Foundation",
+        provider: "CertiOne",
+        icon: "https://media.licdn.com/dms/image/v2/C4E0BAQGKN4BZGDsREg/company-logo_200_200/company-logo_200_200/0/1658357194740/certione_certification_logo?e=1743033600&v=beta&t=5bWqUBSC2gi3ja_2_MeeyP5hnAcvrnkXXZ98uLxxXDs",
+        credential: "https://certione.org/certificate-verification/35EF7B8-35EF694-303684B/"
+    },
+    {
+        title: "Github Foundations",
+        provider: "Github",
+        icon: "https://media.licdn.com/dms/image/v2/C560BAQFmuLSyL1nlPA/company-logo_200_200/company-logo_200_200/0/1678231359043/github_logo?e=1743033600&v=beta&t=1OBaAqY9s_cenFfAdaqtZrUJ-AcW9Myp6quLmcBgST4",
+        credential: "https://www.credly.com/badges/1ba4e44f-0b4f-4086-94f7-dbda67c455d6/public_url"
+    },
+    {
+        title: "Legacy JS Algorithms and Data Structures",
+        provider: "freeCodeCamp",
+        icon: "https://media.licdn.com/dms/image/v2/C4E0BAQGLKj3JHcof0w/company-logo_200_200/company-logo_200_200/0/1630639684997/free_code_camp_logo?e=1743033600&v=beta&t=0XsRiKf7QsugDnhOfT56mRJ6cIYU2BwN2xcMrJDeWsE",
+        credential: "https://freecodecamp.org/certification/fcc1e3af434-5cd4-414b-afc8-4d3be4b47f83/javascript-algorithms-and-data-structures"
+    },
+    {
+        title: "Javascript Basic",
+        provider: "HackerRank",
+        icon: "https://media.licdn.com/dms/image/v2/D560BAQE8MivsmbT7Ig/company-logo_200_200/company-logo_200_200/0/1705561459405/hackerrank_logo?e=1743033600&v=beta&t=6mTgFctYmJ2euEPfu56QTNb1ClsJnbvU7GZRLohcrDs",
+        credential: "https://www.hackerrank.com/certificates/6eacca40e17c"
+    }
+]
+---
+
+<Section title="Certificados">
+  <div class="flex flex-col gap-4">
+    {certificates.map((certificate)=>{
+        return <CertificateCard {...certificate}/>
+    })}
+  </div>
+</Section>

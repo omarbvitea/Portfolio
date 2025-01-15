@@ -1,0 +1,18 @@
+---
+import Github from "./icons/github.astro";
+import Tags from "./Tags.astro";
+import Link from "./icons/link.astro";
+const { title, github, url, description, tags } = Astro.props;
+---
+
+<article class="flex h-full w-48 flex-col justify-between sm:w-full">
+  <div class="flex h-full flex-col gap-2">
+    <h3 class="text-xl font-semibold">{title}</h3>
+    <span class="flex flex-wrap items-center gap-2">
+        <a href=`${github}` target="_blank" rel="noopener noreferrer" class=`${github ? "block" : "hidden"}`><Github /></a>
+        <a href=`${url}` target="_blank" rel="noopener noreferrer" class=`${url ? "block" : "hidden"}`><Link /></a>
+    </span>
+    <p class="text-justify font-light">{description}</p>
+  </div>
+  <Tags tags={tags} />
+</article>

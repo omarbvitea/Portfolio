@@ -1,0 +1,10 @@
+---
+const {title, role, date} = Astro.props
+---
+<div class="flex w-full justify-between">
+  <div class="flex flex-col">
+    <h3 class="font-medium">{title}</h3>
+    <span class="font-light">{role}</span>
+  </div>
+  <span class="font-light"> {date} </span>
+</div>
