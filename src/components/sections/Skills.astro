@@ -19,15 +19,17 @@ const skills = [
 ]
 ---
 
-<Section title="Habilidades">
+<Section title="Skills">
     <div class="flex flex-wrap items-center gap-3">
         {skills.map((skill)=>{
-            return <span class="skillTag"><skill.icon/>{skill.name}</span>
+            return <span class="flex items-center gap-1.5 rounded-full bg-stone-200 px-2.5 py-1.5 text-sm"><skill.icon/>{skill.name}</span>
         })}
     </div>
 </Section>
+
 <style>
-    .skillTag{
-        @apply flex gap-2 rounded-xl bg-stone-200 px-2 py-2
-    }
+span :global(svg) {
+    width: 18px;
+    height: 18px;
+}
 </style>

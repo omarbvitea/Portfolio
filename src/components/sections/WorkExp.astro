@@ -4,27 +4,26 @@ import Section from "../Section.astro"
 
 const jobs = [
     {
-        title: "Skytech",
-        role: "Desarrollador frontend",
-        date: "2022 - 2023",
-        skills: ["Astro", "Tailwind","Javascript"]
+        title: "Culqi",
+        role: "Frontend Developer Intern",
+        date: "2025 (April - Now)",
+        skills: ["Vue.js", "TypeScript", "Zod", "Pinia", "Microfrontends"]
     },
     {
-        title: "AndeanDev",
-        role: "Desarrollador frontend",
-        date: "2023 - 2024",
-        skills: ["Vue", "Tailwind", "Typescript"]
+        title: "Mrcash",
+        role: "Fullstack Developer",
+        date: "2025 (January - March)",
+        skills: ["Vue.js", "TypeScript", "Vuetify", "Node JS", "Express"]
     },
     {
-        title: "MrCash",
-        role: "Desarrollador fullstack",
-        date: "2024",
-        skills: ["Vue", "Express", "Vuetify"]
+        title: "Andeandev",
+        role: "Frontend Developer",
+        date: "2022 - Now",
+        skills: ["Nuxt.js", "TypeScript", "Tailwind CSS", "Material Design"]
     }
-    
 ]
 ---
-<Section title="Experiencia">
+<Section title="Experience">
     <div class="flex flex-col gap-3">
         {jobs.map((job)=>{
             return <WorkCard {...job}/>

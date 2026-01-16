@@ -3,40 +3,39 @@ import Section from "../Section.astro";
 import ProyectCard from "../ProyectCard.astro";
 
 const projects = [
-    {
-        position: 1,
-        title: "Skytech",
-        github: "",
-        url:"https://skytech-services.vercel.app/",
-        description:"Landing page de los servicios tecnológicos ofrecidos por Skytech",
-        tags: ["Astro", "Javascript", "Tailwind"]
-    },
 	{
-        position: 2,
-        title: "ToDoList",
-        github: "https://github.com/omarbvitea/ToDoList-Front",
-        url:"",
-        description:"App minimalista para gestionar tareas",
-        tags: ["Vuetify", "Nuxt", "Typescript"]
-    },
-	{
-		position: 3,
+		position: 1,
 		title: "MrCRUD",
 		github: "https://github.com/omarbvitea/MrCRUD",
-		url:"",
-		description:"Aplicación web para administrar usuarios",
-		tags: ["Typescript", "Vue", "Express", "MySQL"]
+		url: "",
+		description: "Full Stack application demonstrating a Client-Server architecture with a responsive SPA and REST API.",
+		tags: ["Node.js", "Express", "TypeScript", "MySQL", "Zod", "Vue 3", "Vite", "Tailwind CSS", "Pinia"]
 	},
-
+	{
+		position: 2,
+		title: "Elo Hell Toys",
+		github: "https://github.com/omarbvitea/EHT",
+		url: "https://eht-amber.vercel.app/",
+		description: "Modern web app for TFT player stats using Riot Games API, focused on strict typing and best practices.",
+		tags: ["Vue 3", "TypeScript", "Vite", "PrimeVue", "Tailwind CSS", "TanStack Query", "Pinia"]
+	},
+	{
+		position: 3,
+		title: "Family Tree Platform",
+		github: "",
+		url: "",
+		description: "Web application for creating and managing family trees based on node structures and relationships.",
+		tags: ["In progress"]
+	}
 ]
 ---
 
-<Section title="Proyectos">
+<Section title="Projects">
   <div
     class="slider"
     style=`
     --width: 250px;
-    --height: 250px;
+    --height: 300px;
     --quantity: ${projects.length};`
   >
     <div class="list">
