@@ -1,41 +1,44 @@
 ---
-import Globe from "../icons/globe.astro";
-import Section from "../Section.astro";
-import Networks from "../Networks.astro";
+import Globe from '../icons/globe.astro'
+import Section from '../Section.astro'
+import Networks from '../Networks.astro'
 ---
 
 <section class="mb-10 flex flex-col justify-between gap-10 sm:flex-row">
-  <div class="order-last flex flex-col gap-2 sm:order-none">
-    <h1 class="mb-2 text-3xl font-medium">Omar Vite</h1>
-    <h2 class="font-medium">
-      Frontend Developer, Computer Science
-    </h2>
-    <span class="flex items-center gap-1 font-light"
-      ><Globe /> Lima, Perú
-    </span>
-    <Networks />
-  </div>
-  <div class="flex min-w-fit justify-start sm:justify-end">
-    <img
-      src="https://media.licdn.com/dms/image/v2/D4E03AQGP1bQfWTdqBw/profile-displayphoto-crop_800_800/B4EZkX74CoGwAI-/0/1757043196815?e=1770249600&v=beta&t=cE41ZMP4rlln1yjd5priKyziWVstBMj9VKorHlVavJU"
-      class="h-36 w-36 rounded-full object-cover shadow-2xl"
-      alt="ProfilePhoto"
-    />
-  </div>
+	<div class="order-last flex flex-col gap-2 sm:order-none">
+		<h1 class="mb-2 text-3xl font-medium">Omar Vite</h1>
+		<h2 class="font-medium">Frontend Developer, Computer Science</h2>
+		<span class="flex items-center gap-1 font-light"><Globe /> Lima, Perú </span>
+		<Networks />
+	</div>
+	<div class="flex min-w-fit justify-start sm:justify-end">
+		<img
+			src="https://media.licdn.com/dms/image/v2/D4E03AQGP1bQfWTdqBw/profile-displayphoto-crop_800_800/B4EZkX74CoGwAI-/0/1757043196815?e=1770249600&v=beta&t=cE41ZMP4rlln1yjd5priKyziWVstBMj9VKorHlVavJU"
+			class="h-36 w-36 rounded-full object-cover shadow-2xl"
+			alt="ProfilePhoto"
+		/>
+	</div>
 </section>
 <Section title="About Me">
-  <p class="text-justify font-light">
-    I am a last-year Computer Science student at the Universidad Nacional de
-    Ingeniería and an active member of the scientific outreach group
-    <a
-      href="https://acecom.dev/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="font-semibold text-teal-950">ACECOM</a
-    >. Based in Lima, Peru, I have participated in various university projects as
-    both a designer and developer. I am a <strong>Fullstack Developer</strong> 
-    with a primary focus and expertise in <strong>Frontend</strong>. I am passionate about 
-    creating innovative solutions and working in collaborative teams, and I am always 
-    seeking opportunities to expand my skills and keep up with the latest technological trends.
-  </p>
+	<p class="text-justify font-light">
+		I am a last-year Computer Science student at the Universidad Nacional de Ingeniería and an
+		active member of the scientific outreach group
+		<a
+			href="https://acecom.dev/"
+			target="_blank"
+			rel="noopener noreferrer"
+			class="relative font-semibold text-teal-800 hover:text-teal-900
+              transition-colors duration-300
+              after:content-[''] after:absolute after:left-0 after:-bottom-[1px]
+              after:h-[2px] after:w-full after:bg-teal-900
+              after:scale-x-0 after:origin-left
+              after:transition-transform after:duration-300
+              hover:after:scale-x-100"
+			>ACECOM</a
+		>. Based in Lima, Peru, I have participated in various university projects as a developer. I am
+		a <strong>Fullstack Developer</strong>
+		with a primary focus and expertise in <strong>Frontend</strong>. I am passionate about creating
+		innovative solutions and working in collaborative teams, and I am always seeking opportunities
+		to expand my skills and keep up with the latest technological trends.
+	</p>
 </Section>

@@ -7,7 +7,7 @@ const {title, provider, credential, icon} = Astro.props
     <img src={icon} alt="Logo certificado" class="h-12 w-12 rounded-full object-cover shadow-md"/>
     <div class="flex flex-col">
         <h3 class="font-medium">{title}</h3>
-        <span class="font-light">{provider}</span>
+        <span class="font-light text-sm sm:text-base">{provider}</span>
       </div>
   </div>
   <a href={credential} target="_blank" rel="noopener noreferrer"><ExternalLink/></a>

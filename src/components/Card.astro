@@ -2,9 +2,9 @@
 const {title, role, date} = Astro.props
 ---
 <div class="flex w-full justify-between">
-  <div class="flex flex-col">
-    <h3 class="font-medium">{title}</h3>
-    <span class="font-light">{role}</span>
+  <div class="flex flex-col gap-2">
+    <h3 class="font-medium">{role}</h3>
+    <span class="font-light text-sm sm:text-base">{title}</span>
   </div>
-  <span class="font-light"> {date} </span>
+  <span class="font-light text-sm sm:text-base"> {date} </span>
 </div>
