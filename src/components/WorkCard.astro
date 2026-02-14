@@ -1,16 +1,17 @@
 ---
+import Tags from "./Tags.astro";
+
 const {title, role, date, skills} = Astro.props
 ---
 <div class="flex w-full flex-col justify-between gap-2">
   <div class="flex justify-between">
     <h3 class="font-medium">{title}</h3>
-    <span class="flex justify-end font-light text-sm sm:text-base"> {date} </span>
+    <span class="flex justify-end font-light text-sm"> {date} </span>
   </div>
   <div class="flex justify-between">
-    <span class="font-light text-sm sm:text-base">{role}</span>
+    <span class="font-light text-sm">{role}</span>
     <div class="flex flex-wrap gap-2 justify-end">
-      {skills.map((skill: string) => (
-        <span class="rounded-full bg-gray-100 px-2 py-1 text-xs">{skill}</span>
-      ))}
+      <Tags tags={skills} />
+    </div>
   </div>
 </div>
