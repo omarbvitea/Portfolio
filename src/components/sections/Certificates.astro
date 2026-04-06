@@ -4,16 +4,16 @@ import Section from "../Section.astro";
 
 const certificates = [
     {
-        title: "Scrum Professional Foundation",
-        provider: "CertiOne",
-        icon: "../images/certione_certification_logo.jpeg",
-        credential: "https://certione.org/certificate-verification/35EF7B8-35EF694-303684B/"
-    },
-    {
         title: "Github Foundations",
         provider: "Github",
         icon: "../images/github_logo.jpeg",
         credential: "https://www.credly.com/badges/1ba4e44f-0b4f-4086-94f7-dbda67c455d6/public_url"
+    },
+	{
+        title: "Scrum Professional Foundation",
+        provider: "CertiOne",
+        icon: "../images/certione_certification_logo.jpeg",
+        credential: "https://certione.org/certificate-verification/35EF7B8-35EF694-303684B/"
     },
     {
         title: "Legacy JS Algorithms and Data Structures",
@@ -32,12 +32,18 @@ const certificates = [
         provider: "HackerRank",
         icon: "../images/hackerrank_logo.jpeg",
         credential: "https://www.hackerrank.com/certificates/05c0a71a3710"
+    },
+	{
+        title: "Certified Junior React Dev",
+        provider: "CertificatesDev",
+        icon: "../images/react_certificates_logo.svg",
+        credential: "https://certificates.dev/react/certificates/a16b9b3c-6f12-4a46-8c18-73c54fbebb19"
     }
 ]
 ---
 
 <Section title="Certifications">
-  <div class="flex flex-col gap-4">
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
     {certificates.map((certificate)=>{
         return <CertificateCard {...certificate}/>
     })}
